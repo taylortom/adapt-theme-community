@@ -8,7 +8,7 @@
   "displayName": "Adapt Community",
   "theme": "community",
   "description": "A theme designed to mirror adaptlearning.org",
-  "main": "custom/js/community.js",
+  "main": "js/community.js",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"

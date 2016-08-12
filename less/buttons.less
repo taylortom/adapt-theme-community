@@ -15,6 +15,9 @@ button, .button {
 .button-tertiary { .button-style-hollow(@tertiary-color, @tertiary-color-inverted); }
 .button-tertiary-filled { .button-style-filled(@tertiary-color, @tertiary-color-inverted); }
 
+.button-white { .button-style-hollow(@white, @primary-color); }
+.button-white-filled { .button-style-filled(@white, @primary-color); }
+
 .button-style-hollow(@main, @second) {
     background-color: transparent;
     color: @main;
