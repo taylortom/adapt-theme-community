@@ -1,0 +1,80 @@
+.page {
+    background-color: transparent;
+
+    .page-header {
+        background-color: transparent;
+    }
+    .page-shadow {
+        position: relative;
+        top: 40px;
+        margin-top: -15px;
+        height: 40px;
+        box-shadow: 0 -25px 40px 0 rgba(0,0,0,0.12);
+    }
+
+    .article {
+        background-color: transparent;
+
+        &-inner {
+            padding: 0;
+        }
+
+        .block {
+            .block-style(@bg-color, @text-color, @title-color: @text-color) {
+                background-color: @bg-color;
+                color: @text-color;
+                .component {
+                    &-inner {
+                        background-color: transparent;
+                    }
+                    &-title {
+                        color: @title-color;
+                    }
+                }
+            }
+            &.primary {
+                .block-style(@primary-color, @primary-color-inverted);
+            }
+            &.secondary {
+                .block-style(@secondary-color, @primary-color-inverted);
+            }
+            &.tertiary {
+                .block-style(@tertiary-color, @tertiary-color-inverted);
+            }
+            &.quaternary {
+                .block-style(@quaternary-color, @quaternary-color-inverted, @white);
+            }
+            &.transparent {
+                background-color: transparent;
+                .component-inner {
+                    background-color: @white;
+                }
+            }
+            &.origami {
+                background-image: url('assets/origami-white-bg.png');
+                background-size: cover;
+            }
+
+            .component {
+                &-inner {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .page-footer {
+        padding: 75px 7% 100px 7%;
+        color: @primary-color-inverted;
+        background-color: @primary-color;
+        img {
+            padding: 0px 8px;
+            height: 20px;
+            &.xl {
+                height: 35px;
+            }
+        }
+        .left { float: left; }
+        .right { float: right; }
+    }
+}

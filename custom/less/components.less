@@ -1,0 +1,50 @@
+.media-component {
+    button.media-inline-transcript-button {
+        .button-secondary-filled;
+    }
+}
+
+.question-component {
+    .buttons .buttons-marking-icon {
+        background-color: white;
+        &.icon-tick { color: @validation-success; }
+        &.icon-cross { color: @validation-error; }
+    }
+
+    &.mcq-component {
+        .mcq-widget .mcq-item .mcq-item-state .mcq-item-icon {
+            // TODO remove important...
+            color: @primary-color-inverted !important;
+        }
+    }
+
+    &.slider-component {
+        .slider-widget {
+            .slider-scale-marker,
+            .slider-model-answer {
+                color: @primary-color;
+                background-color: @background-color;
+                border-radius: 2px;
+                border: 2px solid @secondary-color;
+                box-shadow: none;
+                font-weight: @font-weight-bold;
+            }
+            .slider-model-answer {
+                color: @primary-color-inverted;
+                background-color: @validation-success;
+                border: 2px solid @validation-success;
+            }
+            &.incorrect {
+                .slider-scale-marker {
+                    color: @primary-color-inverted;
+                    border-color: @validation-error;
+                }
+            }
+            .slider-item {
+                .rangeslider__handle {
+                    background-color: @background-color;
+                }
+            }
+        }
+    }
+}

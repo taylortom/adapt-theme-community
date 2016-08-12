@@ -1,0 +1,59 @@
+<div class="page-inner article-container" role="main" aria-label="{{_globals._accessibility._ariaLabels.page}}">
+
+	<div class="page-header">
+		<div class="page-header-inner clearfix">
+
+			<div class="page-header-content">
+				<div class="page-header-content-inner">
+
+					{{#if displayTitle}}
+					<div class="page-title">
+						<div class="page-title-inner h1" tabindex="0" role="heading" aria-level="1">
+							{{{displayTitle}}}
+						</div>
+					</div>
+					{{/if}}
+
+					{{#if body}}
+					<div class="page-body">
+						<div class="page-body-inner">
+							{{#if pageBody}}
+								{{{a11y_text pageBody}}}
+							{{else}}
+								{{{a11y_text body}}}
+							{{/if}}
+						</div>
+					</div>
+					{{/if}}
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="page-shadow"></div>
+
+</div>
+
+<div class="page-footer">
+	<div class="left">
+		<a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">
+			<img alt="GLP Logo" class="xl" src="adapt/css/assets/gpl-icon-white.png">
+		</a>
+	</div>
+
+	<div class="right">
+		<a href="http://www.linkedin.com/company/4986164" target="_blank">
+			<img alt="LinkedIn logo" src="adapt/css/assets/linkedin-icon-white.png">
+		</a>
+		<a href="http://www.twitter.com/adaptlearning" target="_blank">
+			<img alt="Twitter logo" src="adapt/css/assets/twitter-icon-white.png">
+		</a>
+		<a href="http://www.youtube.com/channel/UCW8SlSFuCc--B66Gf9fAEcQ/feed" target="_blank">
+			<img alt="YouTube logo" src="adapt/css/assets/youtube-icon-white.png">
+		</a>
+	</div>
+</div>
+
+<div class="aria-label relative a11y-ignore-focus prevent-default" tabindex="0" role="region">{{_globals._accessibility._ariaLabels.pageEnd}}</div>

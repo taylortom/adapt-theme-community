@@ -1,0 +1,35 @@
+// Button styling
+// ==============
+
+button, .button {
+    font-weight: @font-weight-bold;
+    border-radius: @border-radius;
+}
+
+.button-primary { .button-style-hollow(@primary-color, @primary-color-inverted); }
+.button-primary-filled { .button-style-filled(@primary-color-inverted, @primary-color); }
+
+.button-secondary { .button-style-hollow(@secondary-color, @secondary-color-inverted); }
+.button-secondary-filled { .button-style-filled(@secondary-color, @secondary-color-inverted); }
+
+.button-tertiary { .button-style-hollow(@tertiary-color, @tertiary-color-inverted); }
+.button-tertiary-filled { .button-style-filled(@tertiary-color, @tertiary-color-inverted); }
+
+.button-style-hollow(@main, @second) {
+    background-color: transparent;
+    color: @main;
+    border: 1px solid @main;
+    .no-touch &:hover {
+        color: @second;
+        background-color: @main;
+        border-color: @main;
+    }
+}
+
+.button-style-filled(@main, @second) {
+    background-color: @main;
+    color: @second;
+    .no-touch &:hover {
+        background-color: darken(@main, 10%);
+    }
+}

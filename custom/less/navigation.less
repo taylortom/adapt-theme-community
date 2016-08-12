@@ -1,0 +1,67 @@
+.navigation {
+    box-shadow: none;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    background-color: transparent;
+    color: white;
+
+    .navigation-inner {
+        .logo {
+            margin-top: 12px;
+            margin-left: 25px;
+            float: left;
+            width: 37px;
+            height: 38px;
+            background-image: url('assets/nav_logo_white.png');
+        }
+
+        .page-level-progress-navigation {
+
+            .page-level-progress-navigation-completion {
+                background-color: transparent;
+            }
+
+            &:hover {
+                .page-level-progress-navigation-completion {
+                    background-color: transparent;
+                    border-color: @secondary-color;
+                    .page-level-progress-navigation-bar {
+                        background-color: @secondary-color;
+                        border-color: @secondary-color;
+                    }
+                }
+            }
+        }
+
+        .icon:hover {
+            color: @secondary-color;
+        }
+    }
+
+    &.white {
+        background-color: @white;
+        color: @primary-color;
+        .navigation-inner {
+            .logo {
+                background-image: url('assets/nav_logo_blue.png');
+            }
+
+            .page-level-progress-navigation {
+                .page-level-progress-navigation-completion {
+                    border-color: @primary-color;
+                    .page-level-progress-navigation-bar {
+                        background-color: @primary-color;
+                        border-color: @primary-color;
+                    }
+                }
+            }
+
+            .icon {
+                color: @primary-color;
+            }
+        }
+    }
+    @transition-dur: 0.5s;
+    -webkit-transition: background-color @transition-dur;
+    -moz-transition: background-color @transition-dur;
+    transition: background-color @transition-dur;
+}

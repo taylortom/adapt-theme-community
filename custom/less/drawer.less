@@ -1,0 +1,17 @@
+.drawer {
+    .drawer-inner {
+        border-left-width: 2px;
+
+        .drawer-item .drawer-item-open {
+            border-bottom: 1px solid #63def4;
+        }
+
+        .page-level-progress-item-title {
+            &:hover {
+                .page-level-progress-indicator-incomplete {
+                    background-color: @drawer-item-color-hover;
+                }
+            }
+        }
+    }
+}
