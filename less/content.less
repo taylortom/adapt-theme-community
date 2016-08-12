@@ -16,10 +16,20 @@
         background-color: transparent;
 
         &-inner {
-            padding: 0;
+            padding: 60px 0 0 0;
+            .article-title {
+                font-weight: @font-weight-bold;
+            }
         }
 
         .block {
+            .block-title {
+                font-weight: @font-weight-bold;
+            }
+
+            /*
+            * Reusable styles
+            */
             .block-style(@bg-color, @text-color, @title-color: @text-color) {
                 background-color: @bg-color;
                 color: @text-color;
@@ -58,6 +68,10 @@
             .component {
                 &-inner {
                     background-color: transparent;
+                    padding: 20px 0;
+                    .component-title {
+                        font-weight: @font-weight-bold;
+                    }
                 }
             }
         }
