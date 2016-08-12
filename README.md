@@ -1,8 +1,6 @@
 # adapt-theme-community
 
-This is a theme which mirrors the [Adapt community site](http://www.adaptlearning.org/)
-
-Using vanilla as a base, community is a *theme* intended to mirror the .
+This is a theme which mirrors the [Adapt community site](http://www.adaptlearning.org/).
 
 See example course here: [code.taylortom.co.uk/adapt-theme-community/](http://code.taylortom.co.uk/examples/adapt-theme-community/)
 
