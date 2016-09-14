@@ -74,9 +74,13 @@
             }
             &.transparent {
                 background-color: transparent;
-                .component-inner {
-                    background-color: @white;
-                    padding: 20px;
+                .component {
+                    border-radius: @border-radius;
+                    overflow: hidden;
+                    &-inner {
+                        background-color: @white;
+                        padding: 20px;
+                    }
                 }
             }
             &.origami {
