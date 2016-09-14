@@ -14,16 +14,27 @@
 
     .article {
         background-color: transparent;
-
         &-inner {
             padding: 0;
-            .article-title {
-                font-size: @article-title-font-size;
-                text-align: center;
-            }
-            .article-body {
-                font-size: @article-body-font-size;
-                text-align: center;
+            .article-header {
+                max-width: 100%;
+                background-color: @tertiary-color;
+                padding: 75px 0 60px 0;
+                .article-title {
+                    margin-bottom: 0;
+                    font-size: @article-title-font-size;
+                    color: white;
+                    text-align: center;
+                    &-inner {
+                        margin-bottom: 0;
+                    }
+                }
+                .article-body {
+                    margin-bottom: 0;
+                    font-size: @article-body-font-size;
+                    text-align: center;
+                    color: @tertiary-color-inverted;
+                }
             }
         }
 
