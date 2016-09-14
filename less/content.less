@@ -33,68 +33,75 @@
                     margin-bottom: 0;
                     font-size: @article-body-font-size;
                     text-align: center;
-                    color: @tertiary-color-inverted;
+                    color: white;
                 }
             }
-        }
 
-        .block {
-            .block-title {
-                font-size: @block-title-font-size;
-                color: @font-color;
-                text-align: center;
-            }
-            .block-body {
-                font-size: @block-body-font-size;
-                text-align: center;
-            }
-
-            /*
-            * Reusable styles
-            */
-            .block-style(@bg-color, @text-color, @title-color: @text-color) {
-                background-color: @bg-color;
-                color: @text-color;
-                .block-title,
-                .component-title {
-                    color: @title-color;
+            .block {
+                .block-title {
+                    font-size: @block-title-font-size;
+                    color: @font-color;
+                    text-align: center;
                 }
-            }
-            &.primary {
-                .block-style(@primary-color, @primary-color-inverted);
-            }
-            &.secondary {
-                .block-style(@secondary-color, @primary-color-inverted);
-            }
-            &.tertiary {
-                .block-style(@tertiary-color, @tertiary-color-inverted, @white);
-            }
-            &.quaternary {
-                .block-style(@quaternary-color, @quaternary-color-inverted, @white);
-            }
-            &.transparent {
-                background-color: transparent;
+                .block-body {
+                    font-size: @block-body-font-size;
+                    text-align: center;
+                }
+
                 .component {
-                    border-radius: @border-radius;
-                    overflow: hidden;
-                    &-inner {
-                        background-color: @white;
-                        padding: 20px;
+                    .component-inner {
+                        background-color: transparent;
+                        padding: 20px 0;
+                        .component-title {
+                            font-weight: 400;
+                        }
                     }
                 }
-            }
-            &.origami {
-                background-image: url('assets/origami-white-bg.png');
-                background-size: cover;
-            }
-
-            .component {
-                &-inner {
-                    background-color: transparent;
-                    padding: 20px 0;
+                /*
+                * Reusable block styles
+                */
+                .block-style(@bg-color, @text-color, @title-color: @text-color) {
+                    background-color: @bg-color;
+                    color: @text-color;
+                    .block-title,
                     .component-title {
-                        font-weight: 400;
+                        color: @title-color;
                     }
+                }
+                &.primary {
+                    .block-style(@primary-color, @primary-color-inverted);
+                }
+                &.secondary {
+                    .block-style(@secondary-color, @primary-color-inverted);
+                }
+                &.tertiary {
+                    .block-style(@tertiary-color, @tertiary-color-inverted, @white);
+                }
+                &.quaternary {
+                    .block-style(@quaternary-color, @quaternary-color-inverted, @white);
+                }
+                &.transparent {
+                    background-color: transparent;
+                    color: white;
+                    .block-title {
+                        color: white;
+                    }
+                    .block-body {
+                        color: white;
+                    }
+                    .component {
+                        color: @font-color;
+                        border-radius: @border-radius;
+                        overflow: hidden;
+                        &-inner {
+                            background-color: @white;
+                            padding: 20px;
+                        }
+                    }
+                }
+                &.origami {
+                    background-image: url('assets/origami-white-bg.png');
+                    background-size: cover;
                 }
             }
         }
