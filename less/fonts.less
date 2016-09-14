@@ -30,3 +30,14 @@ a {
     color: @primary-color;
     text-decoration: none;
 }
+
+.article-title,
+.block-title,
+.component-title,
+.item-title,
+.sub-title,
+.notify-popup-title {
+    @media all and (max-width: @device-width-small) {
+        font-size: (@component-title-font-size - 3px) !important;
+    }
+}
