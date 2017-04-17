@@ -2,7 +2,38 @@
   "type":"object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
-  "$ref": "http://localhost/plugins/content/theme/model.schema",
+  "required":false,
   "properties":{
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties":{
+        "block": {
+          "type":"object",
+          "properties":{
+            "_theme101": {
+              "type":"object",
+              "required":false,
+              "legend": "Theme 101",
+              "properties":{
+                "label": {
+                  "type":"string",
+                  "required":false,
+                  "title": "Label",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "_colour": {
+                  "type":"string",
+                  "required":false,
+                  "title": "Colour",
+                  "inputType": "ColorPicker",
+                  "validators": []
+                }
+              }
+            }
+          }
+      }
+    }
   }
 }
