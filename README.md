@@ -2,7 +2,7 @@
 
 This is a theme which mirrors the [Adapt community site](http://www.adaptlearning.org/).
 
-See example course here: [code.tomtaylor.name/adapt-theme-community/](http://code.tomtaylor.name/examples/adapt-theme-community/)
+See example course here: [code.tomtaylor.name/adapt-theme-community/](http://code.tomtaylor.name/2_examples/adapt-theme-community/)
 
 ## Reusable Styles
 
