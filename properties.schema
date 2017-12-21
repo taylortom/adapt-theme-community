@@ -4,6 +4,48 @@
   "id": "http://jsonschema.net",
   "required":false,
   "properties":{
+    "primary-color": {
+      "type":"string",
+      "required":false,
+      "title": "Primary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "primary-color-inverted": {
+      "type":"string",
+      "required":false,
+      "title": "Primary colour inverted",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "secondary-color": {
+      "type":"string",
+      "required":false,
+      "title": "Secondary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "secondary-color-inverted": {
+      "type":"string",
+      "required":false,
+      "title": "Secondary colour inverted",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "tertiary-color": {
+      "type":"string",
+      "required":false,
+      "title": "Tertiary colour",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
+    "tertiary-color-inverted": {
+      "type":"string",
+      "required":false,
+      "title": "Tertiary colour inverted",
+      "inputType": "ColorPicker",
+      "validators": []
+    },
     "pluginLocations": {
       "type":"object",
       "required":true,
