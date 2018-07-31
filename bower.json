@@ -9,6 +9,7 @@
   "theme": "community",
   "description": "A theme designed to mirror adaptlearning.org",
   "main": "js/community.js",
+  "targetAttribute": "adapt-theme-community",
   "keywords": [
     "adapt-plugin",
     "adapt-theme"
