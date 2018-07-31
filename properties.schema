@@ -4,48 +4,6 @@
   "id": "http://jsonschema.net",
   "required":false,
   "properties":{
-    "primary-color": {
-      "type":"string",
-      "required":false,
-      "title": "Primary colour",
-      "inputType": "ColorPicker",
-      "validators": []
-    },
-    "primary-color-inverted": {
-      "type":"string",
-      "required":false,
-      "title": "Primary colour inverted",
-      "inputType": "ColorPicker",
-      "validators": []
-    },
-    "secondary-color": {
-      "type":"string",
-      "required":false,
-      "title": "Secondary colour",
-      "inputType": "ColorPicker",
-      "validators": []
-    },
-    "secondary-color-inverted": {
-      "type":"string",
-      "required":false,
-      "title": "Secondary colour inverted",
-      "inputType": "ColorPicker",
-      "validators": []
-    },
-    "tertiary-color": {
-      "type":"string",
-      "required":false,
-      "title": "Tertiary colour",
-      "inputType": "ColorPicker",
-      "validators": []
-    },
-    "tertiary-color-inverted": {
-      "type":"string",
-      "required":false,
-      "title": "Tertiary colour inverted",
-      "inputType": "ColorPicker",
-      "validators": []
-    },
     "pluginLocations": {
       "type":"object",
       "required":true,
@@ -53,24 +11,26 @@
         "block": {
           "type":"object",
           "properties":{
-            "_theme101": {
+            "adapt-theme-community": {
               "type":"object",
               "required":false,
-              "legend": "Theme 101",
+              "legend": "Community",
               "properties":{
-                "label": {
-                  "type":"string",
-                  "required":false,
-                  "title": "Label",
-                  "inputType": "Text",
-                  "validators": []
-                },
-                "_colour": {
-                  "type":"string",
-                  "required":false,
-                  "title": "Colour",
-                  "inputType": "ColorPicker",
-                  "validators": []
+                "_class": {
+                  "type": "string",
+                  "required": true,
+                  "default" : "info",
+                  "title" : "Block style",
+                  "validators": [],
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      "primary",
+                      "secondary",
+                      "tertiary",
+                      "origami"
+                    ]
+                  }
                 }
               }
             }
