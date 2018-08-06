@@ -2,7 +2,135 @@
   "type":"object",
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "http://jsonschema.net",
-  "$ref": "http://localhost/plugins/content/theme/model.schema",
-  "properties":{
+  "required":false,
+  "properties": {
+    "pluginLocations": {
+      "type":"object",
+      "required":true,
+      "properties": {
+        "config": {
+          "type":"object",
+          "properties": {
+            "adapt-theme-community": {
+              "type":"object",
+              "required":false,
+              "legend": "Community",
+              "properties": {
+                "_fontFamily": {
+                  "type": "string",
+                  "required": true,
+                  "default" : "",
+                  "title" : "Course font-family",
+                  "validators": [],
+                  "inputType": "Text",
+                  "help": "The font-family CSS property to use for course text. If you've specified a custom font URL, you can use that family here."
+                },
+                "_fontUrl": {
+                  "type": "string",
+                  "required": true,
+                  "default" : "",
+                  "title" : "Custom web font URL",
+                  "validators": [],
+                  "inputType": "Text",
+                  "help": "The URL to a custom web font (e.g. a Google Fonts resource)."
+                },
+                "_logo": {
+                  "type":"string",
+                  "required": false,
+                  "default": "",
+                  "title" : "Logo image",
+                  "inputType": "Asset:image",
+                  "validators": [],
+                  "help": "Navigation bar logo"
+                },
+                "_backgroundImage": {
+                  "type":"string",
+                  "required": false,
+                  "default": "assets/bg.jpg",
+                  "title" : "Background image",
+                  "inputType": "Asset:image",
+                  "validators": [],
+                  "help": "Course background image"
+                },
+                "_footer": {
+                  "type": "object",
+                  "title": "Page footer",
+                  "properties" : {
+                    "_show": {
+                      "type": "boolean",
+                      "default": true,
+                      "isSetting": false,
+                      "inputType": "Checkbox",
+                      "validators": [],
+                      "title": "Show footer?"
+                    },
+                    "_backgroundColour": {
+                      "type": "string",
+                      "default": "#36cde8",
+                      "isSetting": false,
+                      "inputType": "ColourPicker",
+                      "validators": [],
+                      "title": "Background colour"
+                    },
+                    "_content": {
+                      "type": "object",
+                      "title": "Content",
+                      "properties" : {
+                        "_left": {
+                          "type": "string",
+                          "default": "",
+                          "isSetting": false,
+                          "inputType": "CodeEditor",
+                          "validators": [],
+                          "title": "Left column content"
+                        },
+                        "_right": {
+                          "type": "string",
+                          "default": "",
+                          "isSetting": false,
+                          "inputType": "CodeEditor",
+                          "validators": [],
+                          "title": "Right column content"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "block": {
+          "type":"object",
+          "properties": {
+            "adapt-theme-community": {
+              "type":"object",
+              "required":false,
+              "legend": "Community",
+              "properties": {
+                "_class": {
+                  "type": "string",
+                  "required": true,
+                  "default" : "none",
+                  "title" : "Block style",
+                  "validators": [],
+                  "inputType": {
+                    "type": "Select",
+                    "options": [
+                      "none",
+                      "primary",
+                      "secondary",
+                      "tertiary",
+                      "origami",
+                      "transparent"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
